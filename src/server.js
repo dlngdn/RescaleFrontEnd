@@ -27,9 +27,9 @@ router.use(function(req, res, next) {
 
 // Simple in memory database
 const jobs = [
-  { name: 'Chair Structural Test', id: 'rJK69pItf', software: {type: {label: 'Structural Analysis', id: 'structural'}, application: {label: 'Strength Analysis', id: 'strength'}}, hardware: {type: {label: 'Intel Xeon E4-1676  @ 2.3 GHz', id: 'e4'}, cores: 32 }, results: { duration: 16, images: ['img1', 'img2', 'img3']}},
-  { name: 'Watch Interference Test', id: 'BJxY6cTUKM', software: {type: {label: 'Electromagnetics', id: 'electromagnetics'}, application: {label: 'Radio Frequency Interference', id: 'interference'}}, hardware: {type: {label: 'Intel Xeon Platinum 8168', id: 'platinum'}, cores: 64 }, results: { duration: 8, images: ['img1', 'img2', 'img3']}},
-  { name: 'Helmet Turbulence Test', id: 'H1ZKaqTLFf', software: {type: {label: 'Computational Fluid Dynamics', id: 'cfd'}, application: {label: 'Turbulence Modeling', id: 'turbulence'}}, hardware: {type: {label: 'Intel Xeon E5-2667 @ 2.7 GHz', id: 'e5'}, cores: 32 }, results: { duration: 12, images: ['img1', 'img2', 'img3']}},
+  { name: 'Chair Structural Test', id: 'rJK69pItf', software: {type: {label: 'Structural Analysis', id: 'structural'}, application: {label: 'Strength Analysis', id: 'strength'}}, hardware: {type: {label: 'Intel Xeon E4-1676  @ 2.3 GHz', id: 'e4'}, cores: 32 }, results: { duration: 16, images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']}},
+  { name: 'Watch Interference Test', id: 'BJxY6cTUKM', software: {type: {label: 'Electromagnetics', id: 'electromagnetics'}, application: {label: 'Radio Frequency Interference', id: 'interference'}}, hardware: {type: {label: 'Intel Xeon Platinum 8168', id: 'platinum'}, cores: 64 }, results: { duration: 8, images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']}},
+  { name: 'Helmet Turbulence Test', id: 'H1ZKaqTLFf', software: {type: {label: 'Computational Fluid Dynamics', id: 'cfd'}, application: {label: 'Turbulence Modeling', id: 'turbulence'}}, hardware: {type: {label: 'Intel Xeon E5-2667 @ 2.7 GHz', id: 'e5'}, cores: 32 }, results: { duration: 12, images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']}},
 ]
 
 const software = [
@@ -46,18 +46,18 @@ const hardware = [
 
 const results = {
   cfd: {
-    icing: {images: ['icing', 'img2', 'img3']},
-    turbomachinery: {images: ['turbomachinery', 'img2', 'img3']},
-    turbulence: {images: ['turbulence', 'img2', 'img3']}
+    icing: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
+    turbomachinery: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
+    turbulence: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']}
   },
   structural: {
-    strength: {images: ['strength', 'img2', 'img3']},
-    thermal: {images: ['thermal', 'img2', 'img3']},
-    impact: {images: ['impact', 'img2', 'img3']},
+    strength: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
+    thermal: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
+    impact: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
   },
   electromagnetics: {
-    radio: {images: ['radio', 'img2', 'img3']},
-    cooling: {images: ['cooling', 'img2', 'img3']},
+    radio: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
+    cooling: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
   }
 }
 
@@ -279,7 +279,7 @@ router.route('/create')
         type: hardware.type,
         cores: hardware.cores,
       },
-      results: "job in progress..."
+      results: results,
     }
     jobs.push(job);
     console.log('Response:',job)

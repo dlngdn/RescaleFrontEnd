@@ -8,9 +8,9 @@ import {
 export default function( state = [], action) {
   switch (action.type) {
     case GET_JOBS:
-      return action.payload.data;
+      return action.payload.data.jobs;
     case GET_SPECIFIC_JOB:
-      return action.payload.data;
+      return action.payload.data.jobs;
     case CREATE_JOB:
       return [...state, action.payload.data];
     default:
