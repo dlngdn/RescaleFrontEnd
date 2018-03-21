@@ -27,9 +27,9 @@ router.use(function(req, res, next) {
 
 // Simple in memory database
 const jobs = [
-  { name: 'Chair Structural Test', id: 'rJK69pItf', software: {type: {label: 'Structural Analysis', id: 'structural'}, application: {label: 'Strength Analysis', id: 'strength'}}, hardware: {type: {label: 'Intel Xeon E4-1676  @ 2.3 GHz', id: 'e4'}, cores: 32 }, results: { duration: 16, images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']}},
-  { name: 'Watch Interference Test', id: 'BJxY6cTUKM', software: {type: {label: 'Electromagnetics', id: 'electromagnetics'}, application: {label: 'Radio Frequency Interference', id: 'interference'}}, hardware: {type: {label: 'Intel Xeon Platinum 8168', id: 'platinum'}, cores: 64 }, results: { duration: 8, images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']}},
-  { name: 'Helmet Turbulence Test', id: 'H1ZKaqTLFf', software: {type: {label: 'Computational Fluid Dynamics', id: 'cfd'}, application: {label: 'Turbulence Modeling', id: 'turbulence'}}, hardware: {type: {label: 'Intel Xeon E5-2667 @ 2.7 GHz', id: 'e5'}, cores: 32 }, results: { duration: 12, images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']}},
+  { name: 'Chair Structural Test', id: 'rJK69pItf', software: {type: {label: 'Structural Analysis', id: 'structural'}, application: {label: 'Strength Analysis', id: 'strength'}}, hardware: {type: {label: 'Intel Xeon E4-1676  @ 2.3 GHz', id: 'e4'}, cores: 32 }, results: { duration: 16, images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']}},
+  { name: 'Watch Interference Test', id: 'BJxY6cTUKM', software: {type: {label: 'Electromagnetics', id: 'electromagnetics'}, application: {label: 'Radio Frequency Interference', id: 'interference'}}, hardware: {type: {label: 'Intel Xeon Platinum 8168', id: 'platinum'}, cores: 64 }, results: { duration: 8, images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']}},
+  { name: 'Helmet Turbulence Test', id: 'H1ZKaqTLFf', software: {type: {label: 'Computational Fluid Dynamics', id: 'cfd'}, application: {label: 'Turbulence Modeling', id: 'turbulence'}}, hardware: {type: {label: 'Intel Xeon E5-2667 @ 2.7 GHz', id: 'e5'}, cores: 32 }, results: { duration: 12, images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']}},
 ]
 
 const software = [
@@ -46,18 +46,18 @@ const hardware = [
 
 const results = {
   cfd: {
-    icing: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
-    turbomachinery: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
-    turbulence: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']}
+    icing: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
+    turbomachinery: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
+    turbulence: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']}
   },
   structural: {
-    strength: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
-    thermal: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
-    impact: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
+    strength: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
+    thermal: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
+    impact: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
   },
   electromagnetics: {
-    radio: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
-    cooling: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
+    radio: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
+    cooling: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
   }
 }
 
