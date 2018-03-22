@@ -33,9 +33,9 @@ const jobs = [
 ]
 
 const software = [
-  { label: 'Computational Fluid Dynamics', id: 'cfd', image:'path', applications: [{label: 'Aircraft Icing', id: 'icing', image: "path"}, {label: 'Turbomachinery', id: 'turbomachinery', image: 'path'}, {label: 'Turbulence Modeling', id: 'turbulence', image: 'path'} ]},
-  { label: 'Structural Analysis', id: 'structural', image:'path', applications: [{label: 'Strength Analysis', id: 'strength', image: "path"}, {label: 'Thermal Analysis', id: 'thermal', image: 'path'}, {label: 'Impact', id: 'impact', image: 'path'} ]},
-  { label: 'Electromagnetics', id: 'electromagnetics', image:'path', applications: [{label: 'Radio Frequency Interference', id: 'radio', image: "path"}, {label: 'Electronics Cooling', id: 'cooling', image: 'path'} ]},
+  { label: 'Computational Fluid Dynamics', id: 'cfd', info:'Computational fluid dynamics (CFD) is a branch of fluid mechanics that uses numerical analysis and data structures to solve and analyze problems that involve fluid flows', applications: [{label: 'Aircraft Icing', id: 'icing', image: "path"}, {label: 'Turbomachinery', id: 'turbomachinery', image: 'path'}, {label: 'Turbulence Modeling', id: 'turbulence', image: 'path'} ]},
+  { label: 'Structural Analysis', id: 'structural', info:'Structural analysis is the determination of the effects of loads on physical structures and their components. Structures subject to this type of analysis include all that must withstand loads, such as buildings, bridges, vehicles, machinery, furniture, attire, soil strata, prostheses and biological tissue.', applications: [{label: 'Strength Analysis', id: 'strength', image: "path"}, {label: 'Thermal Analysis', id: 'thermal', image: 'path'}, {label: 'Impact', id: 'impact', image: 'path'} ]},
+  { label: 'Electromagnetics', id: 'electromagnetics', info:'Electromagnetism is a branch of physics involving the study of the electromagnetic force, a type of physical interaction that occurs between electrically charged particles.', applications: [{label: 'Radio Frequency Interference', id: 'radio', image: "path"}, {label: 'Electronics Cooling', id: 'cooling', image: 'path'} ]},
 ]
 
 const hardware = [
