@@ -1,8 +1,8 @@
 # Rescale Front End Technical Challenge
 
-This is the take home front end challenge for Rescale.
+This is the take home front end challenge for Rescale. This project should take around 3 hours to complete.
 
-This project should take no longer than 3 hours. The intention of this project is to get a better understanding of your coding ability, your design sense, ux chops & your creativity. It's also intended to give you a better understanding of what we do at Rescale. The application that you will build is a simple version of Rescale's platform. Users will be able to select software simulations & hardware and to run jobs and get back results. If you are invited to come interview at our office we will use your project as a starting point for further discussion & we might ask you to add more functionality to what you have built. Due to time constraints, no testing is required at this stage.
+The intention of this project is to get a better understanding of your coding ability, your design sense, ux chops & your creativity. It's also intended to give you a better understanding of what we do at Rescale. The application that you will build is a simple version of Rescale's platform. Users should be able to select software simulations & hardware, to run jobs and get back results. If you are invited to come interview at our office we will use your project as a starting point for further discussion & we might ask you to add more functionality to what you have built. Due to time constraints, no testing is required at this stage.
 
 Please create an application that uses the endpoints provided. Your application should be able to show the current jobs and their results and should be able to create a new job and show its results.  Please email any questions you may have to davidl at rescale.com.
 
@@ -17,7 +17,6 @@ Individual Job Endpoint:
 http://localhost:3000/api/jobs/:jobId
 
 This endpoint (GET) returns a JSON object with the information for a particular job.
-
 
 Software Endpoint:
 
