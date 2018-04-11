@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { getSoftware, getHardware, getJobs, getSpecificJob, createJob } from '../actions/index';
+import { getSoftware, getHardware, getJobs, createJob } from '../actions/index';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.createJob = this.createJob.bind(this);
-    this.getSpecificJob = this.getSpecificJob.bind(this);
     this.getSoftware = this.getSoftware.bind(this);
     this.getHardware = this.getHardware.bind(this);
     this.getJobs = this.getJobs.bind(this);
@@ -23,11 +22,6 @@ class App extends Component {
     }
     this.props.createJob(data)
   }
-  
-  getSpecificJob() {
-    const jobId = 'rJK69pItf';
-    this.props.getSpecificJob(jobId)
-  }
 
   getSoftware() {
     this.props.getSoftware()
@@ -40,7 +34,6 @@ class App extends Component {
   getJobs() {
     this.props.getJobs()
   }
-  
 
   render() {
     console.log("props");
@@ -63,9 +56,6 @@ class App extends Component {
           <button onClick={this.createJob} className="regular-button">
             Create Job
           </button>
-          <button onClick={this.getSpecificJob} className="regular-button">
-            Get Specific Job
-          </button>
           <button onClick={this.getSoftware} className="regular-button">
             Get Software
           </button>
@@ -87,7 +77,7 @@ function mapStateToProps({ software, hardware, jobs }){
 
 function mapDispatchToProps(dispatch){
   return bindActionCreators({ getSoftware, getHardware,
-    getJobs, getSpecificJob, createJob }, dispatch)
+    getJobs, createJob }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

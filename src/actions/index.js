@@ -35,15 +35,6 @@ export function getJobs() {
   }
 }
 
-//makes a request to get a specific job by id
-export function getSpecificJob(jobId) {
-  const request = axios.get(`${ROOT_URL}/jobs/${jobId}`);
-  return {
-    type: GET_SPECIFIC_JOB,
-    payload: request
-  }
-}
-
 //creates a new job
 export function createJob(data) {
   var params = new URLSearchParams();
