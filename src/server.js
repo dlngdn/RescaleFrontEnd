@@ -27,9 +27,9 @@ router.use(function(req, res, next) {
 
 // Simple in memory database
 const jobs = [
-  { name: 'Chair Structural Test', id: 'rJK69pItf', software: {type: {label: 'Structural Analysis', id: 'structural'}, application: {label: 'Strength Analysis', id: 'strength'}}, hardware: {type: {label: 'Intel Xeon E4-1676  @ 2.3 GHz', id: 'e4'}, cores: 32 }, results: { duration: 16, images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']}},
-  { name: 'Watch Interference Test', id: 'BJxY6cTUKM', software: {type: {label: 'Electromagnetics', id: 'electromagnetics'}, application: {label: 'Radio Frequency Interference', id: 'interference'}}, hardware: {type: {label: 'Intel Xeon Platinum 8168', id: 'platinum'}, cores: 64 }, results: { duration: 8, images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']}},
-  { name: 'Helmet Turbulence Test', id: 'H1ZKaqTLFf', software: {type: {label: 'Computational Fluid Dynamics', id: 'cfd'}, application: {label: 'Turbulence Modeling', id: 'turbulence'}}, hardware: {type: {label: 'Intel Xeon E5-2667 @ 2.7 GHz', id: 'e5'}, cores: 32 }, results: { duration: 12, images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']}},
+  { name: 'Chair Structural Test', id: 'rJK69pItf', software: {type: {label: 'Structural Analysis', id: 'structural'}, application: {label: 'Strength Analysis', id: 'strength'}}, hardware: {type: {label: 'Intel Xeon E4-1676  @ 2.3 GHz', id: 'e4'}, cores: 32 }, results: { duration: 16, images: ['/images/strength2.jpg', '/images/strength1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']}},
+  { name: 'Watch Interference Test', id: 'BJxY6cTUKM', software: {type: {label: 'Electromagnetics', id: 'electromagnetics'}, application: {label: 'Radio Frequency Interference', id: 'radio'}}, hardware: {type: {label: 'Intel Xeon Platinum 8168', id: 'platinum'}, cores: 64 }, results: { duration: 8, images: ['/images/radio2.jpg', '/images/radio1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']}},
+  { name: 'Helmet Turbulence Test', id: 'H1ZKaqTLFf', software: {type: {label: 'Computational Fluid Dynamics', id: 'cfd'}, application: {label: 'Turbulence Modeling', id: 'turbulence'}}, hardware: {type: {label: 'Intel Xeon E5-2667 @ 2.7 GHz', id: 'e5'}, cores: 32 }, results: { duration: 12, images: ['/images/turbulence2.jpg', '/images/turbulence1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']}},
 ]
 
 const software = [
@@ -39,25 +39,25 @@ const software = [
 ]
 
 const hardware = [
-  { label: 'Intel Xeon E4-1676  @ 2.3 GHz', id: 'e4', image:'path', max: 32 },
-  { label: 'Intel Xeon E5-2667 @ 2.7 GHz', id: 'e5', image:'path', max: 32 },
-  { label: 'Intel Xeon Platinum 8168 @ 3.2 GHz', id: 'platinum', image:'path', max: 64 },
+  { label: 'Intel Xeon E4-1676  @ 2.3 GHz', id: 'e4', max: 32 },
+  { label: 'Intel Xeon E5-2667 @ 2.7 GHz', id: 'e5', max: 32 },
+  { label: 'Intel Xeon Platinum 8168 @ 3.2 GHz', id: 'platinum', max: 64 },
 ]
 
 const results = {
   cfd: {
-    icing: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
-    turbomachinery: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
-    turbulence: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']}
+    icing: {images: ['/images/icing2.jpg', '/images/icing1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
+    turbomachinery: {images: ['/images/turbomachinery2.jpg', '/images/turbomachinery1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
+    turbulence: {images: ['/images/turbulence2.jpg', '/images/turbulence1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']}
   },
   structural: {
-    strength: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
-    thermal: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
-    impact: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
+    strength: {images: ['/images/strength2.jpg', '/images/strength1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
+    thermal: {images: ['/images/thermal2.jpg', '/images/thermal1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
+    impact: {images: ['/images/impact2.jpg', '/images/impact1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
   },
   electromagnetics: {
-    radio: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
-    cooling: {images: ['/images/data1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg', '/images/data6.jpg']},
+    radio: {images: ['/images/radio2.jpg', '/images/radio1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
+    cooling: {images: ['/images/cooling2.jpg', '/images/cooling1.jpg', '/images/data2.jpg', '/images/data3.jpg', '/images/data4.jpg', '/images/data5.jpg']},
   }
 }
 
@@ -119,11 +119,16 @@ const getHardware = (hardwareId, cores) => {
   if (newHardware === undefined) {
     return {error: `A hardware with id ${hardwareId} does not exist`}
   }
-  const { type } = newHardware;
+
+  const { id, label } = newHardware;
   const hardwareObj = {
-    type,
+    type: {
+      id,
+      label,
+    },
     cores,
   }
+
   return hardwareObj;
 }
 
@@ -184,7 +189,7 @@ const getDelay = (hardwareCores) => {
 }
 
 const getNewResults = (softwareId, applicationId, duration) => {
-  const images = results[softwareId][applicationId];
+  const { images } = results[softwareId][applicationId];
   if(images === undefined){
     return {error: `applicationId ${applicationId} does not exist for ${softwareId}`}
   }
